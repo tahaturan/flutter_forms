@@ -20,6 +20,9 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             SayfaGecisButton(
                 butonAdi: "Form Kullanimi", gidilecekSayfaAdi: "formKullanimi"),
+            SayfaGecisButton(
+                butonAdi: "AppBar Kullanimi",
+                gidilecekSayfaAdi: "appbarKullanimi"),
           ],
         ),
       ),

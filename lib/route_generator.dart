@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_forms/views/appbar_kullanimi.dart';
 import 'package:flutter_forms/views/form_kullanimi.dart';
 import 'package:flutter_forms/views/my_home_page.dart';
 
@@ -11,6 +12,8 @@ class RouteGenerator {
         return sayfaGecis(const MyHomePage());
       case "/formKullanimi":
         return sayfaGecis(FormKullanimi());
+      case "/appbarKullanimi":
+        return sayfaGecis(AppBarKullanimi());
     }
   }
 
