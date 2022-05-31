@@ -46,14 +46,40 @@ class _AppBarKullanimiState extends State<AppBarKullanimi> {
             icon: const Icon(Icons.info_outline),
             tooltip: "Bilgi",
           ),
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(Icons.more_vert),
-            tooltip: "PopUp Menu",
-          )
+          const AppBarPopUpMenu()
         ],
       ),
       body: Container(),
+    );
+  }
+}
+
+class AppBarPopUpMenu extends StatelessWidget {
+  const AppBarPopUpMenu({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton(
+      child: const Icon(Icons.more_vert),
+      itemBuilder: (context) => [
+        const PopupMenuItem(
+          value: 1,
+          child: Text("Sil"),
+        ),
+        const PopupMenuItem(
+          value: 2,
+          child: Text("Guncelle"),
+        ),
+      ],
+      onSelected: (menuItemValue) {
+        if (menuItemValue == 1) {
+          debugPrint("Sil Tiklanildi");
+        } else if (menuItemValue == 2) {
+          debugPrint("Guncelle tiklandi");
+        }
+      },
     );
   }
 }
