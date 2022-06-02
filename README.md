@@ -10,4 +10,8 @@
 #### Card Kullanimi
 <img src="images/cardKullanimi.gif" height="300">
 
+#### Sabit ListView Kullanimi
+<img src="images/sabitlistview.gif" height="300">
+
+
 
