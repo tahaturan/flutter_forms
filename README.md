@@ -7,3 +7,7 @@
 <img src="images/appbarArama.gif" height="300">
 </div>
 
+#### Card Kullanimi
+<img src="images/cardKullanimi.gif" height="300">
+
+

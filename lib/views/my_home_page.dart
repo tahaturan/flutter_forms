@@ -48,6 +48,8 @@ class _MyHomePageState extends State<MyHomePage> {
             SayfaGecisButton(
                 butonAdi: "AppBar Kullanimi",
                 gidilecekSayfaAdi: "appbarKullanimi"),
+            SayfaGecisButton(
+                butonAdi: "Card Kullanimi", gidilecekSayfaAdi: "cardKullanimi"),
           ],
         ),
       ),
