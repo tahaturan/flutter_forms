@@ -9,11 +9,36 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool aramaYapiliyorMu = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('AnaSayfa'),
+        title: aramaYapiliyorMu
+            ? const Padding(
+                padding: EdgeInsets.all(10.0),
+                child: AppBarAramaText(),
+              )
+            : const Text('AnaSayfa'),
+        actions: [
+          aramaYapiliyorMu
+              ? IconButton(
+                  onPressed: () {
+                    setState(() {
+                      aramaYapiliyorMu = false;
+                    });
+                  },
+                  icon: const Icon(Icons.search_off),
+                )
+              : IconButton(
+                  onPressed: () {
+                    setState(() {
+                      aramaYapiliyorMu = true;
+                    });
+                  },
+                  icon: const Icon(Icons.search),
+                ),
+        ],
       ),
       body: Center(
         child: Column(
@@ -26,6 +51,26 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+    );
+  }
+}
+
+class AppBarAramaText extends StatelessWidget {
+  const AppBarAramaText({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextField(
+      decoration: const InputDecoration(
+        hintText: "Arama Icin Birsey Yazin",
+        hintStyle: TextStyle(color: Colors.white),
+        icon: Icon(Icons.arrow_circle_right_rounded, color: Colors.white),
+      ),
+      onChanged: (aramaSonucu) {
+        debugPrint("arama sonucu : $aramaSonucu");
+      },
     );
   }
 }
