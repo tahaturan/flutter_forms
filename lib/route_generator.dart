@@ -25,7 +25,7 @@ class RouteGenerator {
       case "/sabitGridView":
         return sayfaGecis(const SabitGridViewKullanimi());
       case "/listviewbuilder":
-        return sayfaGecis(ListViewBuilderDinamikListe());
+        return sayfaGecis(const ListViewBuilderDinamikListe());
     }
     return null;
   }

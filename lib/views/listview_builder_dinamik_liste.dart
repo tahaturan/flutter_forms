@@ -18,26 +18,52 @@ class _ListViewBuilderDinamikListeState
       appBar: AppBar(
         title: const Text('ListView.builder : Dinamik Liste'),
       ),
-      body: ListView.builder(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Ulkeler(ulkeler: ulkeler),
+        ],
+      ),
+    );
+  }
+}
+
+class Ulkeler extends StatelessWidget {
+  const Ulkeler({
+    Key? key,
+    required this.ulkeler,
+  }) : super(key: key);
+
+  final List<String> ulkeler;
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 75,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
         itemCount: ulkeler.length,
         itemBuilder: (BuildContext context, int index) {
-          return Card(
-            elevation: 10,
-            shape: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.cyan, width: 2),
-              borderRadius: BorderRadius.all(Radius.circular(20)),
-            ),
-            child: ListTile(
-              leading: CircleAvatar(
-                backgroundColor: Colors.cyan,
-                child: Text("${index + 1}"),
+          return SizedBox(
+            width: 300,
+            child: Card(
+              elevation: 10,
+              shape: const OutlineInputBorder(
+                borderSide: BorderSide(color: Colors.cyan, width: 2),
+                borderRadius: BorderRadius.all(Radius.circular(20)),
               ),
-              title: Text(ulkeler[index]),
-              trailing: ListePopUpMenu(ulkeler: ulkeler, index: index),
-              subtitle: Text(ulkeler[index]),
-              onTap: () {
-                debugPrint("${ulkeler[index]} Tiklandi");
-              },
+              child: ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.cyan,
+                  child: Text("${index + 1}"),
+                ),
+                title: Text(ulkeler[index]),
+                trailing: ListePopUpMenu(ulkeler: ulkeler, index: index),
+                subtitle: Text(ulkeler[index]),
+                onTap: () {
+                  debugPrint("${ulkeler[index]} Tiklandi");
+                },
+              ),
             ),
           );
         },
