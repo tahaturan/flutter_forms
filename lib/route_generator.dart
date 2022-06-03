@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_forms/views/appbar_kullanimi.dart';
 import 'package:flutter_forms/views/card_kullanimi.dart';
 import 'package:flutter_forms/views/form_kullanimi.dart';
+import 'package:flutter_forms/views/listview_builder_dinamik_liste.dart';
 import 'package:flutter_forms/views/my_home_page.dart';
 import 'package:flutter_forms/views/sabit_gridview_kullanimi.dart';
 import 'package:flutter_forms/views/sabit_listview_kullanimi.dart';
@@ -23,6 +24,8 @@ class RouteGenerator {
         return sayfaGecis(const SabitListView());
       case "/sabitGridView":
         return sayfaGecis(const SabitGridViewKullanimi());
+      case "/listviewbuilder":
+        return sayfaGecis(ListViewBuilderDinamikListe());
     }
     return null;
   }
