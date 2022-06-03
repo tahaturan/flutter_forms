@@ -11,6 +11,7 @@ class ListViewBuilderDinamikListe extends StatefulWidget {
 class _ListViewBuilderDinamikListeState
     extends State<ListViewBuilderDinamikListe> {
   List<String> ulkeler = ["Turkiye", "Almanya", "Italya", "Fransa", "Rusra"];
+  String altBaslik = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +33,7 @@ class _ListViewBuilderDinamikListeState
                 child: Text("${index + 1}"),
               ),
               title: Text(ulkeler[index]),
-              trailing: const Icon(Icons.flag_rounded, color: Colors.red),
+              trailing: ListePopUpMenu(ulkeler: ulkeler, index: index),
               subtitle: Text(ulkeler[index]),
               onTap: () {
                 debugPrint("${ulkeler[index]} Tiklandi");
@@ -41,6 +42,51 @@ class _ListViewBuilderDinamikListeState
           );
         },
       ),
+    );
+  }
+}
+
+class ListePopUpMenu extends StatelessWidget {
+  final List<String> ulkeler;
+  final int index;
+
+  const ListePopUpMenu({Key? key, required this.ulkeler, required this.index})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PopupMenuButton(
+      itemBuilder: (context) => [
+        PopupMenuItem(
+          value: 1,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Text("Duzenle"),
+              Icon(Icons.pending),
+            ],
+          ),
+        ),
+        PopupMenuItem(
+          value: 2,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: const [
+              Text("Sil"),
+              Icon(Icons.cancel),
+            ],
+          ),
+        ),
+      ],
+      onSelected: (value) {
+        if (value == 1) {
+          debugPrint("${ulkeler[index]} icin Duzenleme Islemi Secildi");
+        } else if (value == 2) {
+          debugPrint("${ulkeler[index]} icin Silme Islemi Secildi");
+        }
+      },
+      tooltip: "Islem",
+      icon: const Icon(Icons.arrow_circle_down_sharp),
     );
   }
 }
