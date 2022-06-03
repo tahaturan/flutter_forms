@@ -52,6 +52,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 butonAdi: "Card Kullanimi", gidilecekSayfaAdi: "cardKullanimi"),
             SayfaGecisButton(
                 butonAdi: "Sabit ListView", gidilecekSayfaAdi: "sabitListView"),
+            SayfaGecisButton(
+                butonAdi: "Sabit GridView", gidilecekSayfaAdi: "sabitGridView"),
           ],
         ),
       ),

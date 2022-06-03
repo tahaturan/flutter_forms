@@ -5,6 +5,7 @@ import 'package:flutter_forms/views/appbar_kullanimi.dart';
 import 'package:flutter_forms/views/card_kullanimi.dart';
 import 'package:flutter_forms/views/form_kullanimi.dart';
 import 'package:flutter_forms/views/my_home_page.dart';
+import 'package:flutter_forms/views/sabit_gridview_kullanimi.dart';
 import 'package:flutter_forms/views/sabit_listview_kullanimi.dart';
 
 class RouteGenerator {
@@ -20,6 +21,8 @@ class RouteGenerator {
         return sayfaGecis(const CardKullanimi());
       case "/sabitListView":
         return sayfaGecis(const SabitListView());
+      case "/sabitGridView":
+        return sayfaGecis(const SabitGridViewKullanimi());
     }
     return null;
   }
