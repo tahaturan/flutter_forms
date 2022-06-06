@@ -29,6 +29,10 @@
 #### FutureBuilder
 <img src="images/futurebuilder.gif" height="300">
 
+#### Tabs Kullanimi
+<img src="images/tabs.gif" height="300">
+
+
 
 
 

@@ -10,6 +10,7 @@ import 'package:flutter_forms/views/listview_builder_dinamik_liste.dart';
 import 'package:flutter_forms/views/my_home_page.dart';
 import 'package:flutter_forms/views/sabit_gridview_kullanimi.dart';
 import 'package:flutter_forms/views/sabit_listview_kullanimi.dart';
+import 'package:flutter_forms/views/tabs_kullanimi.dart';
 
 class RouteGenerator {
   static Route<dynamic>? routeGenerator(RouteSettings settings) {
@@ -32,6 +33,8 @@ class RouteGenerator {
         return sayfaGecis(const GridViewBuilderKullanimi());
       case "/futureBuilder":
         return sayfaGecis(const FutureBuilderListeleme());
+      case "/tabskullanimi":
+        return sayfaGecis(const TabsKullanimi());
     }
     return null;
   }

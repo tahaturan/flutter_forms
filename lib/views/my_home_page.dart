@@ -63,6 +63,8 @@ class _MyHomePageState extends State<MyHomePage> {
             SayfaGecisButton(
                 butonAdi: "FutureBuilder Listeleme",
                 gidilecekSayfaAdi: "futureBuilder"),
+            SayfaGecisButton(
+                butonAdi: "Tabs Kullanimi", gidilecekSayfaAdi: "tabskullanimi"),
           ],
         ),
       ),
