@@ -67,7 +67,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 butonAdi: "Tabs Kullanimi", gidilecekSayfaAdi: "tabskullanimi"),
             SayfaGecisButton(
                 butonAdi: "Bottom Navigation Bar",
-                gidilecekSayfaAdi: "bottomnavigationbar")
+                gidilecekSayfaAdi: "bottomnavigationbar"),
+            SayfaGecisButton(
+                butonAdi: "Drawer Kullanimi",
+                gidilecekSayfaAdi: "drawerKullanimi"),
           ],
         ),
       ),

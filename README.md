@@ -35,6 +35,11 @@
 #### Bottom Navigation Bar Kullanimi
 <img src="images/bottomnavigationbar.gif" height="300">
 
+#### Drawer Kullanimi
+<img src="images/drawerkullanimi.gif" height="300">
+
+
+
 
 
 

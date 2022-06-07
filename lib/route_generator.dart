@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_forms/views/appbar_kullanimi.dart';
 import 'package:flutter_forms/views/bottom_navigation_bar.dart';
 import 'package:flutter_forms/views/card_kullanimi.dart';
+import 'package:flutter_forms/views/drawer_kullanimi.dart';
 import 'package:flutter_forms/views/form_kullanimi.dart';
 import 'package:flutter_forms/views/future_builder_listeleme.dart';
 import 'package:flutter_forms/views/gridview_builder_kullanimi.dart';
@@ -38,6 +39,8 @@ class RouteGenerator {
         return sayfaGecis(const TabsKullanimi());
       case "/bottomnavigationbar":
         return sayfaGecis(const BottomNavigationBarKullanimi());
+      case "/drawerKullanimi":
+        return sayfaGecis(const DrawerKullanimi());
     }
     return null;
   }
