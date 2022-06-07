@@ -32,6 +32,10 @@
 #### Tabs Kullanimi
 <img src="images/tabs.gif" height="300">
 
+#### Bottom Navigation Bar Kullanimi
+<img src="images/bottomnavigationbar.gif" height="300">
+
+
 
 
 
